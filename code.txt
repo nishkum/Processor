@@ -1,0 +1,22 @@
+v2.0 raw
+4c00000a	#mov r0,10
+4cc00001        #mov r3,1
+4f801000        #mov sp, 4096
+98000003	#call .fac
+7c4c0000        #st r1, [r3]
+90000000        #b itself
+280c0000	#cmp r3, r0
+8000000c	#beq .ret
+8800000b	#bgt .ret
+0fb80008	#sub sp, sp, 8
+7c380000	#st r0, [sp]
+7ff80004	#st ra, 4[sp]
+0c000001	#sub r0, r0, 1
+9ffffff9	#call .fac
+74380000	#ld r0, [sp]
+77f80004	#ld ra, 4[sp]
+10404000	#mul r1, r0, r1
+07b80008	#add sp, sp, 8
+a0000000	#ret
+4c400001	#mov r1, 1
+a0000000	#ret

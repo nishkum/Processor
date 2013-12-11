@@ -1,0 +1,12 @@
+This is a single cycle processor built using logisim.
+
+PRE-REQUISITES:
+	This requires logisim installed on the computer.
+
+USAGE:
+	This processor supports the SimpleRISC ISA.
+Note:
+	SimpleRISC is an ISA , which is very similar to ARM ISA , developed in IIT Delhi for the purpose of teaching.
+
+	The processor consists of sub-circuits. The IF sub-circuit consists of the instruction memory, which by default is loaded by a program that calculates the value of 4! and stores the result in register r1.
+	This can be seen by running the processor by enabling the clock and then checking the value of register r1 under the RegisterFile sub-circuit under the OF sub-circuit .The value should be 24 ,i.e. in hex: 0x 0000 0018.
